@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukentlig Krypto Oversikt</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .date {
+            font-size: 1.1em;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 40px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .market-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .coin-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        .coin-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 12px rgba(0,0,0,0.2);
+        }
+        .coin-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .coin-name {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #333;
+        }
+        .coin-symbol {
+            background: #667eea;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+        .coin-price {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2d3748;
+            margin: 10px 0;
+        }
+        .coin-change {
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            display: inline-block;
+        }
+        .positive {
+            background: #48bb78;
+            color: white;
+        }
+        .negative {
+            background: #f56565;
+            color: white;
+        }
+        .coin-stats {
+            margin-top: 15px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        .trending-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .trending-item {
+            background: #f7fafc;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .trending-rank {
+            background: #667eea;
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        .news-item {
+            background: #f7fafc;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #764ba2;
+        }
+        .news-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+        .news-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .news-link:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+        .highlight {
+            background: #fef5e7;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #f39c12;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Ukentlig Krypto Oversikt</h1>
+            <p class="date">Uke 45 - 10. November 2025</p>
+        </header>
+
+        <div class="content">
+            <div class="highlight">
+                <strong>📊 Markedsoppdatering:</strong> Bitcoin har nådd nye høyder over $106,000! XRP viser sterk vekst med +12% på 24 timer. Markedet viser generelt positive signaler.
+            </div>
+
+            <div class="section">
+                <h2>💰 Top 10 Kryptovalutaer</h2>
+                <div class="market-grid">
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">Bitcoin</span>
+                            <span class="coin-symbol">BTC</span>
+                        </div>
+                        <div class="coin-price">$106,284</div>
+                        <span class="coin-change positive">+4.65%</span>
+                        <div class="coin-stats">
+                            Market Cap: $2.12T<br>
+                            Volume: $71.34B<br>
+                            Rank: #1
+                        </div>
+                    </div>
+
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">Ethereum</span>
+                            <span class="coin-symbol">ETH</span>
+                        </div>
+                        <div class="coin-price">$3,621</div>
+                        <span class="coin-change positive">+6.76%</span>
+                        <div class="coin-stats">
+                            Market Cap: $437.32B<br>
+                            Volume: $32.19B<br>
+                            Rank: #2
+                        </div>
+                    </div>
+
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">XRP</span>
+                            <span class="coin-symbol">XRP</span>
+                        </div>
+                        <div class="coin-price">$2.53</div>
+                        <span class="coin-change positive">+11.97%</span>
+                        <div class="coin-stats">
+                            Market Cap: $152.43B<br>
+                            Volume: $4.64B<br>
+                            Rank: #4
+                        </div>
+                    </div>
+
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">BNB</span>
+                            <span class="coin-symbol">BNB</span>
+                        </div>
+                        <div class="coin-price">$1,001</div>
+                        <span class="coin-change positive">+1.67%</span>
+                        <div class="coin-stats">
+                            Market Cap: $138.03B<br>
+                            Volume: $2.06B<br>
+                            Rank: #5
+                        </div>
+                    </div>
+
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">Solana</span>
+                            <span class="coin-symbol">SOL</span>
+                        </div>
+                        <div class="coin-price">$169.09</div>
+                        <span class="coin-change positive">+7.07%</span>
+                        <div class="coin-stats">
+                            Market Cap: $93.71B<br>
+                            Volume: $5.53B<br>
+                            Rank: #6
+                        </div>
+                    </div>
+
+                    <div class="coin-card">
+                        <div class="coin-header">
+                            <span class="coin-name">Dogecoin</span>
+                            <span class="coin-symbol">DOGE</span>
+                        </div>
+                        <div class="coin-price">$0.184</div>
+                        <span class="coin-change positive">+6.32%</span>
+                        <div class="coin-stats">
+                            Market Cap: $27.92B<br>
+                            Volume: $2.05B<br>
+                            Rank: #9
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>🔥 Trending Kryptovalutaer</h2>
+                <div class="trending-list">
+                    <div class="trending-item">
+                        <span class="trending-rank">1</span>
+                        <div>
+                            <strong>Starknet (STRK)</strong><br>
+                            <small>Rank #120</small>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-rank">2</span>
+                        <div>
+                            <strong>Firo (FIRO)</strong><br>
+                            <small>Rank #855</small>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-rank">3</span>
+                        <div>
+                            <strong>Canton Network (CC)</strong><br>
+                            <small>Rank #35</small>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-rank">4</span>
+                        <div>
+                            <strong>Zcash (ZEC)</strong><br>
+                            <small>Rank #19</small>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-rank">5</span>
+                        <div>
+                            <strong>Pudgy Penguins (PENGU)</strong><br>
+                            <small>Rank #114</small>
+                        </div>
+                    </div>
+                    <div class="trending-item">
+                        <span class="trending-rank">6</span>
+                        <div>
+                            <strong>Bitcoin (BTC)</strong><br>
+                            <small>Rank #1</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📰 Viktige Nyheter Denne Uken</h2>
+                
+                <div class="news-item">
+                    <div class="news-title">Bitcoin på vei mot $110,000</div>
+                    <p>Fire viktige amerikanske økonomiske hendelser kan påvirke Bitcoins vei mot $110,000 denne uken. Markedet følger nøye med på makroøkonomiske indikatorer.</p>
+                    <a href="https://beincrypto.com/us-economic-events-bitcoins-110000/" target="_blank" class="news-link">Les mer →</a>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-title">Ripple Swell Event i New York</div>
+                    <p>Ripple arrangerer sitt årlige Swell-event med deltakelse fra JPMorgan, BlackRock, CME og Franklin Templeton. Viktige kunngjøringer forventes.</p>
+                    <a href="https://www.banklesstimes.com/articles/2025/11/02/crypto-news-to-watch-this-week-ripple-swell-sonic-upgrade-and-more/" target="_blank" class="news-link">Les mer →</a>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-title">SEC Godkjenner Nye Spot Crypto ETFer</div>
+                    <p>Securities and Exchange Commission har godkjent spot crypto ETFer for Solana, Hedera og Litecoin, noe som åpner for økt institusjonell adopsjon.</p>
+                    <a href="https://crypto.news" target="_blank" class="news-link">Les mer →</a>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-title">Sonic Upgrade Kommer</div>
+                    <p>En stor teknisk oppgradering er planlagt som kan påvirke flere blockchain-nettverk og forbedre skalerbarhet og ytelse.</p>
+                    <a href="https://www.banklesstimes.com/articles/2025/11/02/crypto-news-to-watch-this-week-ripple-swell-sonic-upgrade-and-more/" target="_blank" class="news-link">Les mer →</a>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>📈 Markedsanalyse</h2>
+                <div class="highlight">
+                    <p><strong>Bullish Momentum:</strong> Markedet viser sterke positive signaler med Bitcoin over $106K og Ethereum over $3,600. XRP leder med imponerende +12% vekst.</p>
+                    <p style="margin-top: 10px;"><strong>Volum:</strong> Høyt handelsvolum på $71B for Bitcoin indikerer sterk markedsaktivitet og interesse.</p>
+                    <p style="margin-top: 10px;"><strong>Altcoins:</strong> Solana (+7%) og Dogecoin (+6%) viser også solid vekst, noe som tyder på bred markedsoppgang.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>🔄 Oppdatert: 10. November 2025 | Data fra CoinGecko & Crypto.news</p>
+            <p style="margin-top: 10px;">⚠️ Dette er ikke finansiell rådgivning. Gjør alltid din egen research.</p>
+        </footer>
+    </div>
+</body>
+</html>
