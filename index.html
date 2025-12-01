@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Weekly - Market Update Nov 24, 2025</title>
+    <title>Crypto Weekly - Market Update December 1, 2025</title>
     <style>
         * {
             margin: 0;
@@ -38,12 +38,50 @@
             color: #666;
             font-size: 0.9em;
         }
+        .news-section {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .news-section h2 {
+            color: #764ba2;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        .news-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        .news-item h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        .news-item p {
+            color: #666;
+            font-size: 0.95em;
+            margin-bottom: 8px;
+        }
+        .news-link {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .news-link:hover {
+            text-decoration: underline;
+        }
         .section {
             background: rgba(255, 255, 255, 0.95);
             padding: 25px;
             border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
         h2 {
             color: #764ba2;
@@ -58,105 +96,81 @@
             margin-top: 20px;
         }
         .crypto-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             padding: 20px;
-            border-radius: 10px;
-            border-left: 5px solid #667eea;
+            border-radius: 12px;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             transition: transform 0.3s ease;
         }
         .crypto-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .crypto-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
         .crypto-name {
             font-size: 1.3em;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
         }
         .crypto-symbol {
-            color: #667eea;
-            font-weight: bold;
-            text-transform: uppercase;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
         }
         .crypto-price {
-            font-size: 1.5em;
-            color: #764ba2;
+            font-size: 1.8em;
             font-weight: bold;
             margin: 10px 0;
         }
         .crypto-change {
             padding: 5px 10px;
             border-radius: 5px;
+            font-weight: 600;
             display: inline-block;
-            font-weight: bold;
         }
         .positive {
-            background: #d4edda;
-            color: #155724;
+            background: rgba(76, 175, 80, 0.3);
         }
         .negative {
-            background: #f8d7da;
-            color: #721c24;
+            background: rgba(244, 67, 54, 0.3);
         }
-        .crypto-details {
-            margin-top: 10px;
+        .crypto-stats {
+            margin-top: 15px;
             font-size: 0.9em;
-            color: #555;
+            opacity: 0.9;
+        }
+        .stat-row {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
         }
         .trending-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
         .trending-item {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        .rank-badge {
-            background: rgba(255,255,255,0.3);
-            padding: 3px 8px;
-            border-radius: 50%;
-            font-size: 0.8em;
-        }
-        .news-item {
-            background: #f8f9fa;
-            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            padding: 15px;
             border-radius: 10px;
-            margin-bottom: 15px;
-            border-left: 4px solid #667eea;
+            color: white;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        .news-title {
+        .trending-rank {
+            font-size: 0.8em;
+            opacity: 0.8;
+        }
+        .trending-name {
             font-size: 1.2em;
             font-weight: bold;
-            color: #333;
-            margin-bottom: 10px;
-        }
-        .news-meta {
-            color: #666;
-            font-size: 0.85em;
-            margin-bottom: 10px;
-        }
-        .news-excerpt {
-            color: #555;
-            line-height: 1.6;
-        }
-        .news-link {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 10px;
-        }
-        .news-link:hover {
-            color: #764ba2;
+            margin: 5px 0;
         }
         footer {
             text-align: center;
@@ -170,139 +184,258 @@
     <div class="container">
         <header>
             <h1>🚀 Crypto Weekly</h1>
-            <p class="update-time">Last Updated: November 24, 2025 at 08:59 CET</p>
+            <p class="update-time">Last Updated: December 1, 2025 at 08:59 CET</p>
         </header>
 
+        <div class="news-section">
+            <h2>📰 Latest Crypto News</h2>
+            <div class="news-item">
+                <h3>Bitcoin, Ethereum Fall Sharply as Crypto Sell-Off Resumes</h3>
+                <p>Bitcoin and Ethereum fell sharply on Monday as the recent sell-off in cryptocurrencies resumed. Bitcoin tumbled to around $86,273, a slide of about 5.5%, while Ethereum dropped more than 6.5% to reach $2,831. Risk-off sentiment in broader markets hangs over digital assets as sell-off resumes in December.</p>
+                <a href="https://www.cnbc.com/2025/12/01/bitcoin-ethereum-fall-sharply-as-crypto-sell-off-resumes-.html" target="_blank" class="news-link">Read more on CNBC →</a>
+            </div>
+            <div class="news-item">
+                <h3>Bitcoin Slides to Below $88,000 in Risk-Off Start to December</h3>
+                <p>Cryptocurrencies fell sharply on Monday, bringing fresh momentum to a wide-ranging selloff. Bitcoin slid as much as 6% to below $86,000 in early Asia trading, while Ether dropped more than 7% to about $2,800. Most tokens followed a similar pattern, with Solana falling 7.8%.</p>
+                <a href="https://www.bloomberg.com/news/articles/2025-12-01/bitcoin-btc-slides-to-below-88-000-in-risk-off-start-to-december" target="_blank" class="news-link">Read more on Bloomberg →</a>
+            </div>
+            <div class="news-item">
+                <h3>Market Impact: China's PBOC Warning on Digital Currencies</h3>
+                <p>A statement by the People's Bank of China on Saturday warning of illegal activities relating to digital currencies heaped pressure on Hong Kong-listed shares of digital assets-related companies. Macroeconomic concerns including uncertainty over a possible U.S. rate cut continue to weigh on investors' minds.</p>
+                <a href="https://www.coindesk.com/markets/2025/12/01/bitcoin-ether-xrp-slide-as-december-begins-with-yearn-attack" target="_blank" class="news-link">Read more on CoinDesk →</a>
+            </div>
+        </div>
+
         <div class="section">
-            <h2>📊 Top 10 Cryptocurrencies by Market Cap</h2>
+            <h2>💎 Top 10 Cryptocurrencies by Market Cap</h2>
             <div class="crypto-grid">
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">BTC</span> Bitcoin
+                    <div class="crypto-header">
+                        <span class="crypto-name">Bitcoin</span>
+                        <span class="crypto-symbol">BTC</span>
                     </div>
-                    <div class="crypto-price">$86,999</div>
-                    <div class="crypto-change positive">+1.58%</div>
-                    <div class="crypto-details">
-                        Market Cap: $1.74T<br>
-                        24h Volume: $66.74B<br>
-                        Rank: #1
-                    </div>
-                </div>
-                
-                <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">ETH</span> Ethereum
-                    </div>
-                    <div class="crypto-price">$2,828.88</div>
-                    <div class="crypto-change positive">+1.42%</div>
-                    <div class="crypto-details">
-                        Market Cap: $341.57B<br>
-                        24h Volume: $22.23B<br>
-                        Rank: #2
+                    <div class="crypto-price">$86,531</div>
+                    <div class="crypto-change negative">-4.85%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$1.73T</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$65.47B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#1</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">USDT</span> Tether
+                    <div class="crypto-header">
+                        <span class="crypto-name">Ethereum</span>
+                        <span class="crypto-symbol">ETH</span>
                     </div>
-                    <div class="crypto-price">$0.9997</div>
-                    <div class="crypto-change positive">+0.01%</div>
-                    <div class="crypto-details">
-                        Market Cap: $184.35B<br>
-                        24h Volume: $82.97B<br>
-                        Rank: #3
+                    <div class="crypto-price">$2,840.59</div>
+                    <div class="crypto-change negative">-5.50%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$343.07B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$21.56B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#2</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">XRP</span> Ripple
+                    <div class="crypto-header">
+                        <span class="crypto-name">Tether</span>
+                        <span class="crypto-symbol">USDT</span>
+                    </div>
+                    <div class="crypto-price">$1.00</div>
+                    <div class="crypto-change negative">-0.02%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$184.63B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$81.40B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="crypto-card">
+                    <div class="crypto-header">
+                        <span class="crypto-name">XRP</span>
+                        <span class="crypto-symbol">XRP</span>
                     </div>
                     <div class="crypto-price">$2.06</div>
-                    <div class="crypto-change positive">+2.15%</div>
-                    <div class="crypto-details">
-                        Market Cap: $124.51B<br>
-                        24h Volume: $4.03B<br>
-                        Rank: #4
+                    <div class="crypto-change negative">-6.50%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$123.98B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$3.67B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#4</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">BNB</span> Binance Coin
+                    <div class="crypto-header">
+                        <span class="crypto-name">BNB</span>
+                        <span class="crypto-symbol">BNB</span>
                     </div>
-                    <div class="crypto-price">$853.84</div>
-                    <div class="crypto-change positive">+1.61%</div>
-                    <div class="crypto-details">
-                        Market Cap: $117.65B<br>
-                        24h Volume: $1.42B<br>
-                        Rank: #5
+                    <div class="crypto-price">$832.40</div>
+                    <div class="crypto-change negative">-4.86%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$114.65B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$1.86B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#5</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">USDC</span> USD Coin
+                    <div class="crypto-header">
+                        <span class="crypto-name">USDC</span>
+                        <span class="crypto-symbol">USDC</span>
                     </div>
-                    <div class="crypto-price">$0.9997</div>
-                    <div class="crypto-change negative">-0.02%</div>
-                    <div class="crypto-details">
-                        Market Cap: $74.11B<br>
-                        24h Volume: $6.07B<br>
-                        Rank: #6
+                    <div class="crypto-price">$0.9998</div>
+                    <div class="crypto-change positive">+0.01%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$76.47B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$4.75B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#6</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">SOL</span> Solana
+                    <div class="crypto-header">
+                        <span class="crypto-name">Solana</span>
+                        <span class="crypto-symbol">SOL</span>
                     </div>
-                    <div class="crypto-price">$130.53</div>
-                    <div class="crypto-change positive">+1.32%</div>
-                    <div class="crypto-details">
-                        Market Cap: $73.11B<br>
-                        24h Volume: $4.52B<br>
-                        Rank: #7
+                    <div class="crypto-price">$127.31</div>
+                    <div class="crypto-change negative">-6.76%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$71.21B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$5.37B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#7</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">TRX</span> TRON
+                    <div class="crypto-header">
+                        <span class="crypto-name">TRON</span>
+                        <span class="crypto-symbol">TRX</span>
                     </div>
-                    <div class="crypto-price">$0.2772</div>
-                    <div class="crypto-change positive">+1.20%</div>
-                    <div class="crypto-details">
-                        Market Cap: $26.25B<br>
-                        24h Volume: $528.23M<br>
-                        Rank: #8
+                    <div class="crypto-price">$0.2764</div>
+                    <div class="crypto-change negative">-1.41%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$26.17B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$718.23M</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#8</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">STETH</span> Lido Staked Ether
+                    <div class="crypto-header">
+                        <span class="crypto-name">Lido Staked Ether</span>
+                        <span class="crypto-symbol">STETH</span>
                     </div>
-                    <div class="crypto-price">$2,828.08</div>
-                    <div class="crypto-change positive">+1.38%</div>
-                    <div class="crypto-details">
-                        Market Cap: $24.48B<br>
-                        24h Volume: $31.98M<br>
-                        Rank: #9
+                    <div class="crypto-price">$2,839.93</div>
+                    <div class="crypto-change negative">-5.53%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$24.51B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$25.74M</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#9</span>
+                        </div>
                     </div>
                 </div>
-                
+
                 <div class="crypto-card">
-                    <div class="crypto-name">
-                        <span class="crypto-symbol">DOGE</span> Dogecoin
+                    <div class="crypto-header">
+                        <span class="crypto-name">Dogecoin</span>
+                        <span class="crypto-symbol">DOGE</span>
                     </div>
-                    <div class="crypto-price">$0.1463</div>
-                    <div class="crypto-change positive">+2.62%</div>
-                    <div class="crypto-details">
-                        Market Cap: $22.23B<br>
-                        24h Volume: $1.45B<br>
-                        Rank: #10
+                    <div class="crypto-price">$0.1376</div>
+                    <div class="crypto-change negative">-7.78%</div>
+                    <div class="crypto-stats">
+                        <div class="stat-row">
+                            <span>Market Cap:</span>
+                            <span>$20.91B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>24h Volume:</span>
+                            <span>$1.38B</span>
+                        </div>
+                        <div class="stat-row">
+                            <span>Rank:</span>
+                            <span>#10</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -312,72 +445,52 @@
             <h2>🔥 Trending Cryptocurrencies</h2>
             <div class="trending-list">
                 <div class="trending-item">
-                    <span class="rank-badge">#1</span> Bitcoin (BTC)
+                    <div class="trending-rank">#1 Trending</div>
+                    <div class="trending-name">Monad</div>
+                    <div>MON</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#2</span> Zcash (ZEC)
+                    <div class="trending-rank">#2 Trending</div>
+                    <div class="trending-name">Bitcoin</div>
+                    <div>BTC</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#3</span> Avici (AVICI)
+                    <div class="trending-rank">#3 Trending</div>
+                    <div class="trending-name">Pippin</div>
+                    <div>PIPPIN</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#4</span> Pudgy Penguins (PENGU)
+                    <div class="trending-rank">#4 Trending</div>
+                    <div class="trending-name">Zcash</div>
+                    <div>ZEC</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#5</span> Hyperliquid (HYPE)
+                    <div class="trending-rank">#5 Trending</div>
+                    <div class="trending-name">Hyperliquid</div>
+                    <div>HYPE</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#6</span> Starknet (STRK)
+                    <div class="trending-rank">#6 Trending</div>
+                    <div class="trending-name">Sui</div>
+                    <div>SUI</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#7</span> Sui (SUI)
+                    <div class="trending-rank">#7 Trending</div>
+                    <div class="trending-name">Ethereum</div>
+                    <div>ETH</div>
                 </div>
                 <div class="trending-item">
-                    <span class="rank-badge">#8</span> Ethereum (ETH)
+                    <div class="trending-rank">#8 Trending</div>
+                    <div class="trending-name">Solana</div>
+                    <div>SOL</div>
                 </div>
-                <div class="trending-item">
-                    <span class="rank-badge">#9</span> Solana (SOL)
-                </div>
-                <div class="trending-item">
-                    <span class="rank-badge">#10</span> Tensor (TNSR)
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2>📰 Latest Crypto News</h2>
-            
-            <div class="news-item">
-                <div class="news-title">Bitcoin, Ethereum, and XRP Rebound After Recent Downside Pressure</div>
-                <div class="news-meta">FXStreet • November 24, 2025</div>
-                <div class="news-excerpt">
-                    Bitcoin (BTC), Ethereum (ETH), and Ripple (XRP) begin the week with a modest recovery on Monday after last week's massive correction. These top three cryptocurrencies are holding above their key support levels, suggesting recovery continuation. Bitcoin faced rejection at $106,453 on November 11 and has declined more than 20% over the past 12 days, reaching a low of $80,600 last Friday. BTC managed a mild rebound over the weekend, closing above $86,830 on Sunday.
-                </div>
-                <a href="https://www.fxstreet.com/cryptocurrencies/news/top-3-price-prediction-bitcoin-ethereum-ripple-btc-eth-and-xrp-rebound-after-recent-downside-pressure-202511240316" target="_blank" class="news-link">Read More →</a>
-            </div>
-            
-            <div class="news-item">
-                <div class="news-title">Bitcoin Jumps From Oversold Territory as ZEC Extends 922% YTD Rally</div>
-                <div class="news-meta">Finance Feeds • November 24, 2025</div>
-                <div class="news-excerpt">
-                    Bitcoin is showing signs of recovery from oversold conditions while Zcash (ZEC) continues its impressive year-to-date rally of 922%. The broader market sentiment remains fragile, but technical indicators suggest that downside pressure may be moderating as bearish momentum shows early signs of exhaustion.
-                </div>
-                <a href="https://financefeeds.com/bitcoin-jumps-from-oversold-territory-as-zec-extends-922-ytd-rally/" target="_blank" class="news-link">Read More →</a>
-            </div>
-            
-            <div class="news-item">
-                <div class="news-title">What Is a Layer-1 Blockchain? The Base Layer Powering Bitcoin and Crypto</div>
-                <div class="news-meta">Decrypt • November 24, 2025</div>
-                <div class="news-excerpt">
-                    Understanding the fundamental architecture of blockchain technology. Layer-1 blockchains serve as the base layer for cryptocurrency networks, providing the foundation for Bitcoin, Ethereum, and other major cryptocurrencies. This comprehensive guide explores how these foundational protocols work and their importance in the crypto ecosystem.
-                </div>
-                <a href="https://decrypt.co/resources/what-is-layer-1-blockchain-base-layer-powering-bitcoin-crypto" target="_blank" class="news-link">Read More →</a>
             </div>
         </div>
 
         <footer>
-            <p>💎 Crypto Weekly - Your Source for Cryptocurrency Market Updates</p>
-            <p style="margin-top: 10px; font-size: 0.9em;">Data provided by CoinGecko • News aggregated from multiple sources</p>
+            <p>Crypto Weekly - Your Daily Crypto Market Update</p>
+            <p>Data provided by CoinGecko | News aggregated from multiple sources</p>
+            <p>© 2025 Crypto Weekly. All rights reserved.</p>
         </footer>
     </div>
 </body>
